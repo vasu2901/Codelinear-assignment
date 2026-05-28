@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-
+import { CTASection } from "./DigitalBanking";
 const features = [
   "Customer-On Boarding",
   "Managing deposits and withdrawals",
@@ -39,6 +39,7 @@ export function CB7Features() {
           </div>
         </div>
       </div>
+      <CTASection />
     </section>
   );
 }

@@ -1,109 +1,148 @@
-
-
 const phoneDashboard = "/phone-dashboard.png";
 const phoneAnalytics = "/phone-analytics.png";
 const phoneProfile = "/phone-profile.png";
 
-export function CTASection2() {
-    return (
-        <section
-            className="relative overflow-hidden px-8 md:px-16 py-14 md:py-20 text-white"
-            style={{ backgroundColor: "var(--cta-bg)" }}
-        >
-            {/* Faint CB7 watermark */}
-            <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 flex items-start justify-center"
-            >
-                <span className="text-[18rem] md:text-[22rem] font-semibold tracking-tighter text-white/[0.03] leading-none -mt-12 select-none">
-                    CB7
-                </span>
-            </div>
-            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-8 max-w-6xl mx-auto">
-                <div className="max-w-lg">
-                    <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
-                        Take the full advantage of<br />going paper-less now.
-                    </h2>
-                    <p className="mt-4 text-sm text-white/55 max-w-md leading-relaxed">
-                        N7 helps your financial institution improve the client experience,
-                        automate and optimize procedures, simplify banking operations.
-                    </p>
-                </div>
-                <div className="flex gap-3 shrink-0">
-                    <button className="rounded-md border border-white/15 px-6 py-3 text-xs font-medium tracking-wide uppercase hover:bg-white/5 transition">
-                        Contact us
-                    </button>
-                    <button className="rounded-md bg-[var(--brand)] px-6 py-3 text-xs font-medium tracking-wide uppercase text-[var(--brand-foreground)] hover:opacity-90 transition">
-                        Request demo
-                    </button>
-                </div>
-            </div>
-        </section>
-    );
-}
-
 function Sparkle() {
-    return (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-secondary-foreground/40 shrink-0">
-            <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" fill="currentColor" />
-        </svg>
-    );
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="text-secondary-foreground/30 shrink-0"
+    >
+      <path
+        d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
 }
 
 function Nav() {
-    return (
-        <header className="bg-background border-b border-border/60">
-            <div className="flex items-center justify-center gap-5 px-8 py-5 text-sm">
-                <span className="font-semibold tracking-tight text-[var(--brand)]">N7</span>
-                <span className="text-secondary-foreground/70">Say</span>
-                <span className="text-lg">👋</span>
-                <span className="text-secondary-foreground/70">to the new way of banking</span>
-                <Sparkle />
-                <span className="font-semibold tracking-tight text-[var(--brand)]">CB7</span>
-                <span className="text-secondary-foreground/70">Say</span>
-            </div>
-        </header>
-    );
+  return (
+    <header
+      className="border-b border-black/5"
+      style={{ backgroundColor: "var(--secondary-background)" }}
+    >
+      <div className="flex items-center justify-center gap-3 px-4 md:px-8 py-4 text-xs md:text-sm whitespace-nowrap overflow-hidden">
+        <span className="font-semibold tracking-tight text-[var(--brand)]">
+          N7
+        </span>
+
+        <span className="text-black/60">Say</span>
+
+        <span>👋</span>
+
+        <span className="text-black/70">
+          to the new way of banking
+        </span>
+
+        <Sparkle />
+
+        <span className="font-semibold tracking-tight text-[var(--brand)]">
+          CB7
+        </span>
+
+        <span className="text-black/60">Say</span>
+      </div>
+    </header>
+  );
 }
 
 function Hero() {
-    return (
-        <section className="px-8 md:px-16 pt-16 pb-12 max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight text-secondary-foreground leading-[1.05]">
-                Digital banking<br />out-of-the-box
-            </h1>
-            <p className="mt-6 text-sm text-muted-foreground max-w-sm leading-relaxed">
-                N7 helps your financial institution improve the client experience,
-                automate and optimize procedures.
-            </p>
-            <button className="mt-8 rounded-md bg-[var(--brand)] px-6 py-3 text-xs font-medium tracking-wide uppercase text-[var(--brand-foreground)] shadow-sm hover:opacity-90 transition">
-                Request demo
-            </button>
-        </section>
-    );
+  return (
+    <div className="max-w-[320px] mx-auto md:mx-0">
+      <h1 className="text-[38px] md:text-[64px] font-semibold tracking-tight leading-[0.92] text-black">
+        Digital banking
+        <br />
+        out-of-the-box
+      </h1>
+
+      <p className="mt-5 max-w-[280px] text-sm leading-relaxed text-black/55">
+        N7 helps your financial institution improve the client experience,
+        automate and optimize procedures.
+      </p>
+
+      <button className="mt-7 rounded-md bg-[var(--brand)] px-5 py-2.5 text-[11px] font-medium tracking-wider uppercase text-white shadow-sm hover:opacity-90 transition">
+        Request demo
+      </button>
+
+      <div className="mt-6">
+        <a
+          href="#features"
+          className="text-[11px] font-medium tracking-wider uppercase text-[var(--brand)] hover:underline"
+        >
+          Learn more →
+        </a>
+      </div>
+    </div>
+  );
 }
 
 type FeatureProps = {
-    image: string;
-    title: string;
-    body: string;
-    bullets: string[];
-    reverse?: boolean;
+  image: string;
+  title: string;
+  body: string;
+  bullets: string[];
+  reverse?: boolean;
 };
 
-function Feature({ image, title, body, bullets }: FeatureProps) {
+function Feature({
+  image,
+  title,
+  body,
+  bullets,
+  reverse = false,
+}: FeatureProps) {
   return (
-    <div className="grid grid-cols-[auto_1fr] gap-8 md:gap-12 items-center">
-      <div className="flex justify-center">
-        <img src={image} alt={title} width={640} height={896} loading="lazy" className="w-48 md:w-56 drop-shadow-2xl" />
+    <div
+      className={`
+        flex flex-col items-center text-center
+        md:grid md:grid-cols-2 md:items-center md:text-left
+        gap-10 md:gap-20
+        ${reverse ? "md:[&>*:first-child]:order-2" : ""}
+      `}
+    >
+      {/* PHONE */}
+      <div className="flex justify-center w-full">
+        <img
+          src={image}
+          alt={title}
+          className="
+            w-[190px]
+            sm:w-[220px]
+            md:w-[180px]
+            lg:w-[220px]
+            xl:w-[250px]
+            h-auto
+            object-contain
+            drop-shadow-[0_25px_40px_rgba(0,0,0,0.18)]
+          "
+        />
       </div>
-      <div className="max-w-xs">
-        <h2 className="text-base font-semibold tracking-tight text-foreground">{title}</h2>
-        <p className="mt-2.5 text-xs text-muted-foreground leading-relaxed">{body}</p>
-        <ul className="mt-4 space-y-2">
+
+      {/* TEXT */}
+      <div className="max-w-[290px]">
+        <h2 className="text-[22px] md:text-lg font-semibold leading-snug text-black">
+          {title}
+        </h2>
+
+        <p className="mt-4 text-sm md:text-sm leading-relaxed text-black/55">
+          {body}
+        </p>
+
+        <ul className="mt-5 space-y-3">
           {bullets.map((b) => (
-            <li key={b} className="flex items-start gap-2.5 text-xs text-foreground/80">
-              <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[var(--brand)] shrink-0" />
+            <li
+              key={b}
+              className="
+                flex items-start gap-3
+                text-sm md:text-sm
+                text-black/70
+              "
+            >
+              <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" />
               {b}
             </li>
           ))}
@@ -114,46 +153,135 @@ function Feature({ image, title, body, bullets }: FeatureProps) {
 }
 
 function LightSection() {
-    return (
-        <div className="relative overflow-hidden" style={{ background: "var(--hero-gradient)" }}>
-            {/* Faint N7 watermark */}
-            <div aria-hidden className="pointer-events-none absolute inset-0 flex items-start justify-end">
-                <span className="text-[20rem] md:text-[26rem] font-semibold tracking-tighter text-secondary-foreground/[0.04] leading-none -mt-10 -mr-10 select-none">
-                    N7
-                </span>
-            </div>
-            <div className="relative">
-                <Hero />
-                <Feature
-                    image={phoneDashboard}
-                    title="Fully compliant with regulatory requirements"
-                    body="The global nature of risk management with regulations is achieved by our risk management framework that is fully integrated to work with digital bank in special instances and conditions."
-                    bullets={["Pre-Integrated Security System", "Fully Compliant With Regulatory Requirement", "Digitally Connected Core"]}
-                />
-                <Feature
-                    reverse
-                    image={phoneAnalytics}
-                    title="No legacy IT systems"
-                    body="Our digital banking solution and multi-channel approach helps financial institutions take advantage of digital opportunities by providing solutions free from regulatory restrictions."
-                    bullets={["Adaptive & Intelligent API", "Ambient User Experience", "Cloud-native API Meets TCO"]}
-                />
-                <Feature
-                    image={phoneProfile}
-                    title="No tellers or branches"
-                    body="Our digital banking out-of-the-box helps you to accelerate innovation while reducing risks of transforming operational structure and lower brand new experience to your users."
-                    bullets={["Direct Best in Paperless Banking", "Digital Transformation Capability", "Optimized, Adaptable and Scalable"]}
-                />
-            </div>
+  return (
+    <section
+      className="relative overflow-hidden"
+      style={{ background: "var(--hero-gradient)" }}
+    >
+      {/* LEFT CIRCLES */}
+      <div className="absolute left-[-280px] top-[180px] h-[620px] w-[620px] rounded-full border border-black/[0.04]" />
+      <div className="absolute left-[-140px] top-[320px] h-[360px] w-[360px] rounded-full border border-black/[0.04]" />
+
+      {/* RIGHT SHAPES */}
+      <div className="absolute right-[-120px] top-[120px] h-[260px] w-[260px] rounded-full border border-black/[0.03]" />
+      <div className="absolute right-[60px] bottom-[140px] h-[180px] w-[180px] rounded-full border border-black/[0.03]" />
+
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-14 md:py-24">
+        <div className="grid md:grid-cols-[420px_1fr] gap-16 md:gap-24 items-start">
+          
+          {/* HERO */}
+          <div className="md:sticky md:top-24">
+            <Hero />
+          </div>
+
+          {/* FEATURES */}
+          <div
+            id="features"
+            className="flex flex-col gap-24 md:gap-32"
+          >
+            <Feature
+              image={phoneDashboard}
+              title="Fully compliant with regulatory requirements"
+              body="The global nature of risk management with regulations is achieved by our risk management framework."
+              bullets={[
+                "Pre-integrated security system",
+                "Regulatory-ready architecture",
+                "Digitally connected core",
+              ]}
+            />
+
+            <Feature
+              reverse
+              image={phoneAnalytics}
+              title="No legacy IT systems"
+              body="Our Digital Banking Solution helps financial institutions modernize operations."
+              bullets={[
+                "Adaptive intelligent API",
+                "Ambient user experience",
+                "Cloud-native architecture",
+              ]}
+            />
+
+            <Feature
+              image={phoneProfile}
+              title="No tellers or branches"
+              body="Accelerate innovation while reducing operational transformation risks."
+              bullets={[
+                "Paperless banking",
+                "Digital transformation capability",
+                "Optimized and scalable",
+              ]}
+            />
+          </div>
         </div>
-    );
+      </div>
+
+      <CTASection />
+    </section>
+  );
+}
+
+export function CTASection() {
+  return (
+    <section className="px-4 md:px-6 py-8 md:py-10">
+      <div
+        className="
+          max-w-6xl mx-auto
+          rounded-2xl
+          px-6 md:px-10
+          py-8 md:py-10
+          text-white
+          border border-white/10
+          overflow-hidden
+          relative
+        "
+        style={{
+          background:
+            "radial-gradient(circle at top right, rgba(0,120,255,0.15), transparent 30%), var(--cta-bg)",
+        }}
+      >
+        {/* subtle lines */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute right-10 top-0 h-full w-px bg-white/20" />
+          <div className="absolute right-32 top-0 h-full w-px bg-white/10" />
+        </div>
+
+        <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          
+          <div className="max-w-md">
+            <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight">
+              Take the full advantage of
+              <br />
+              going paper-less now.
+            </h2>
+
+            <p className="mt-4 text-sm text-white/60 leading-relaxed">
+              N7 helps your financial institution improve the client
+              experience, automate and optimize procedures, simplify banking
+              operations.
+            </p>
+          </div>
+
+          <div className="flex gap-3 shrink-0">
+            <button className="h-10 px-5 rounded-md border border-white/20 text-[11px] uppercase tracking-wider font-medium hover:bg-white/5 transition">
+              Contact us
+            </button>
+
+            <button className="h-10 px-5 rounded-md bg-[var(--brand)] text-[11px] uppercase tracking-wider font-medium text-white hover:opacity-90 transition">
+              Request demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export function DigitalBanking() {
-    return (
-        <div className="min-h-screen bg-background">
-            <Nav />
-            <LightSection />
-            <CTASection2 />
-        </div>
-    );
-}
+  return (
+    <div className="min-h-screen bg-background overflow-hidden">
+      <Nav />
+      <LightSection />
+    </div>
+  );
+}   

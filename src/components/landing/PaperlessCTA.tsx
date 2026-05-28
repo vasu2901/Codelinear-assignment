@@ -1,6 +1,6 @@
 export function PaperlessCTA() {
   return (
-    <section className="px-6 py-24 md:px-12 lg:px-20">
+    <section className="px-4 md:px-6 py-8 md:py-10">
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
         <div className="max-w-2xl">
           <h2 className="text-4xl font-light leading-[1.1] text-foreground lg:text-5xl">

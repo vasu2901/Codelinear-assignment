@@ -34,18 +34,40 @@ export function CaseStudies() {
             </div>
           </article>
         </div>
-        <div className="mt-10 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <button aria-label="Previous" className="flex h-10 w-10 items-center justify-center rounded-full border border-[oklch(0.65_0.2_245)] text-[oklch(0.65_0.2_245)] transition-colors hover:bg-[oklch(0.65_0.2_245)]/10">
+        <div className="mt-10 flex flex-col items-center gap-6 md:flex-row md:justify-between">
+          <div className="flex items-center justify-center gap-6 w-full">
+            <button
+              aria-label="Previous"
+              className="
+      flex h-10 w-10 items-center justify-center
+      rounded-full
+      border border-[oklch(0.65_0.2_245)]
+      text-[oklch(0.65_0.2_245)]
+      transition-colors
+      hover:bg-[oklch(0.65_0.2_245)]/10
+    "
+            >
               <ArrowLeft className="h-4 w-4" />
             </button>
+
             <div className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
               <span className="h-1.5 w-6 rounded-full bg-[oklch(0.65_0.2_245)]" />
               <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
               <span className="h-1.5 w-1.5 rounded-full bg-white/30" />
             </div>
-            <button aria-label="Next" className="flex h-10 w-10 items-center justify-center rounded-full border border-[oklch(0.65_0.2_245)] text-[oklch(0.65_0.2_245)] transition-colors hover:bg-[oklch(0.65_0.2_245)]/10">
+
+            <button
+              aria-label="Next"
+              className="
+      flex h-10 w-10 items-center justify-center
+      rounded-full
+      border border-[oklch(0.65_0.2_245)]
+      text-[oklch(0.65_0.2_245)]
+      transition-colors
+      hover:bg-[oklch(0.65_0.2_245)]/10
+    "
+            >
               <ArrowRight className="h-4 w-4" />
             </button>
           </div>
